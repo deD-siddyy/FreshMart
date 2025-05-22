@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FreshMart | Future Products</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    .header {
+      background-color: #2e7d32;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .header nav {
+      margin-top: 10px;
+    }
+
+    .header nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .header nav a:hover {
+      text-decoration: underline;
+    }
+
+    .future-products {
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    .future-products h2 {
+      text-align: center;
+      color: #2e7d32;
+      margin-bottom: 30px;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .product-card {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      text-align: center;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .product-card img {
+      width: 100%;
+      max-height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    .product-name {
+      font-size: 20px;
+      font-weight: bold;
+      color: #2e7d32;
+    }
+
+    .product-desc {
+      margin: 10px 0;
+      font-size: 14px;
+    }
+
+    .notify-btn {
+      background-color: #2e7d32;
+      color: white;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .notify-btn:hover {
+      background-color: #1b5e20;
+    }
+
+    /* Back to Top */
+    #backToTop {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: #2e7d32;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      padding: 12px 16px;
+      font-size: 18px;
+      cursor: pointer;
+      display: none;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    }
+
+    #backToTop:hover {
+      background-color: #1b5e20;
+    }
+
+    .footer {
+      background-color: #111;
+      color: #ccc;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    @media(max-width: 600px) {
+      .header nav {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <h1>FreshMart</h1>
+    <nav>
+      <a href="/index.html">Home</a>
+      <a href="/index.html">Products</a>
+      <a href="/offfer.html">Offers</a>
+      <a href="/product.html">Future Products</a>
+    </nav>
+  </header>
+
+  <!-- Future Products -->
+  <section class="future-products">
+    <h2>🌿 Coming Soon to FreshMart 🌿</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="https://thumbs.dreamstime.com/b/vibrant-array-exotic-african-fruits-mangoes-papayas-oranges-bananas-wooden-platter-indulge-your-senses-350346417.jpg" alt="Exotic Fruits">
+        <div class="product-name">Exotic Fruits Box</div>
+        <p class="product-desc">A curated selection of rare and tropical fruits from around the world.</p>
+        <button class="notify-btn" onclick="notify('Exotic Fruits Box')">Notify Me</button>
+      </div>
+
+      <div class="product-card">
+        <img src="https://i.etsystatic.com/37022574/r/il/266a5a/4134389825/il_570xN.4134389825_sf1x.jpg" alt="Vegan Snacks">
+        <div class="product-name">Healthy Vegan Snacks</div>
+        <p class="product-desc">Nutritious, plant-based snack packs for guilt-free munching.</p>
+        <button class="notify-btn" onclick="notify('Healthy Vegan Snacks')">Notify Me</button>
+      </div>
+
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1627308595229-7830a5c91f9f" alt="Organic Juices">
+        <div class="product-name">Organic Cold-Pressed Juices</div>
+        <p class="product-desc">Refreshing, 100% organic, cold-pressed fruit and veggie blends.</p>
+        <button class="notify-btn" onclick="notify('Organic Juices')">Notify Me</button>
+      </div>
+
+      <div class="product-card">
+        <img src="https://meyers.com/wp-content/uploads/2022/07/shutterstock_2152470619.webp" alt="Eco Packaging">
+        <div class="product-name">Eco-Friendly Packaging</div>
+        <p class="product-desc">Sustainable and biodegradable packaging solutions for all your grocery needs.</p>
+        <button class="notify-btn" onclick="notify('Eco-Friendly Packaging')">Notify Me</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2025 FreshMart. All rights reserved. | Email: support@freshmart.com | Call: +91 12345 67890</p>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+
+  <!-- JavaScript -->
+  <script>
+    // Notify button functionality
+    function notify(productName) {
+      alert(`📩 You will be notified when "${productName}" is available!`);
+    }
+
+    // Back to top button
+    const backToTopBtn = document.getElementById("backToTop");
+    window.onscroll = () => {
+      backToTopBtn.style.display =
+        document.documentElement.scrollTop > 200 ? "block" : "none";
+    };
+
+    backToTopBtn.onclick = () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreshMart - Organic Groceries</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="top-bar">
+            <div class="container">
+                <!-- <div class="top-links">
+                    <a href="#"><i class="fas fa-map-marker-alt"></i> Select Location</a>
+                    <a href="#"><i class="fas fa-phone-alt"></i> Download App</a>
+                    <a href="#"><i class="fas fa-question-circle"></i> Help Center</a>
+                </div> -->
+                <div class="auth-links">
+                    <a href="/login.html" id="login-toggle">Login</a>
+                    <span>|</span>
+                    <a href="/registration.html" id="register-toggle">Register</a>
+                </div>
+            </div>
+        </div>
+        
+        <nav class="main-nav">
+            <div class="container">
+                <div class="nav-brand">
+                    <a href="index.html" class="logo">
+                        <h1>FreshMart</h1>
+                        <span class="tagline">Online Grocery Store</span>
+                    </a>
+                </div>
+                
+                <div class="search-container">
+                    <div class="search-box">
+                        <input type="text" placeholder="Search for products..." id="search-input">
+                        <button id="search-btn"><i class="fas fa-search"></i></button>
+                    </div>
+                    <div class="quick-links">
+                        <a href="#" data-category="fruits">Fruits</a>
+                        <a href="#" data-category="vegetables">Vegetables</a>
+                        <a href="#" data-category="dairy">Dairy</a>
+                    </div>
+                </div>
+                
+                <div class="nav-actions">
+                    
+                   
+                    <div class="nav-action cart-toggle">
+                        <a href="#" class="nav-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span id="cart-count">0</span>
+                            <span>Cart</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        
+        <nav class="category-nav">
+            <div class="container">
+                <div class="category-menu">
+                    <button class="category-toggle">
+                        <i class="fas fa-bars"></i>
+                        <span>All Categories</span>
+                    </button>
+                    <div class="category-dropdown">
+                        <a href="#" data-category="fruits">Fruits & Vegetables</a>
+                        <a href="#" data-category="dairy">Dairy & Breakfast</a>
+                        <a href="#" data-category="bakery">Bakery & Snacks</a>
+                        <a href="#" data-category="beverages">Beverages</a>
+                    </div>
+                </div>
+                
+            </div>
+        </nav>
+    </header>
+
+    <main class="container flexx">
+        <aside class="sidebar">
+            <h2>Refine By</h2>
+            <div class="filters">
+                <div class="filter-group">
+                    <h3>Categories</h3>
+                    <div class="category-filters">
+                        <button class="category-btn active" data-category="all">All Products</button>
+                        <button class="category-btn" data-category="fruits">Fruits</button>
+                        <button class="category-btn" data-category="vegetables">Vegetables</button>
+                        <button class="category-btn" data-category="dairy">Dairy</button>
+                        <button class="category-btn" data-category="bakery">Bakery</button>
+                    </div>
+                </div>
+                <div class="filter-group">
+                    <h3>Price Range</h3>
+                    <div class="price-range">
+                        <input type="range" min="0" max="10" value="10" class="slider" id="price-range">
+                        <div class="price-values">
+                            <span>Rs0</span>
+                            <span>Rs150</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <section class="main-content">
+            <div class="sort-options">
+                <span>Sort By:</span>
+                <select id="sort-by">
+                    <option value="default">Default</option>
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="price-high">Price: High to Low</option>
+                    <option value="name-asc">Name: A-Z</option>
+                    <option value="name-desc">Name: Z-A</option>
+                </select>
+            </div>
+            <div id="product-list" class="product-grid"></div>
+
+            
+        </section>
+ 
+            <aside class="cart-sidebar none">
+            <div class="cart-header">
+                <h2>Your Cart</h2>
+                <button id="close-cart"><i class="fas fa-times"></i></button>
+            </div>
+            <div id="cart-items"></div>
+            <div class="cart-footer">
+                <div id="cart-total">Total: Rs 0.00</div>
+                <button id="checkout-btn" disa bled>Proceed to Checkout</button>
+            </div>
+        </aside> 
+
+
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>FreshMart</h3>
+                    <p>Your one-stop shop for fresh, organic groceries delivered to your doorstep.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://x.com/"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul> 
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="/about.html">About Us</a></li>
+                        <li><a href="/product.html">Products</a></li>
+                        <li><a href="/offfer.html">Offers</a></li>
+                        <li><a href="/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Categories</h3>
+                    <ul>
+                        <li><a href="#" data-category="fruits">Fruits</a></li>
+                        <li><a href="#" data-category="vegetables">Vegetables</a></li>
+                        <li><a href="#" data-category="dairy">Dairy</a></li>
+                        <li><a href="#" data-category="bakery">Bakery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Grocery St, Freshville</li>
+                        <li><i class="fas fa-phone-alt"></i> (123) 456-7890</li>
+                        <li><i class="fas fa-envelope"></i> info@freshmart.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 FreshMart. All rights reserved.</p>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                    <i class="fab fa-cc-apple-pay"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

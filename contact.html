@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - FreshMart</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background-color: #2e7d32;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      position: relative;
+    }
+
+    .home-button {
+      position: absolute;
+      left: 20px;
+      top: 20px;
+      background-color: white;
+      color: #2e7d32;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    .home-button:hover {
+      background-color: #e0f2f1;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 40px auto;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #2e7d32;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .info {
+      margin-bottom: 30px;
+    }
+
+    .info p {
+      margin: 8px 0;
+      font-size: 16px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .form-group textarea {
+      resize: vertical;
+    }
+
+    .submit-btn {
+      background-color: #2e7d32;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .submit-btn:hover {
+      background-color: #1b5e20;
+    }
+
+    .footer {
+      background-color: #111;
+      color: #ccc;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+
+    @media(max-width: 600px) {
+      .container {
+        margin: 20px;
+        padding: 20px;
+      }
+      .home-button {
+        top: 10px;
+        left: 10px;
+        padding: 6px 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="home-button">🏠 Home</a>
+    <h1>Contact Us - FreshMart</h1>
+  </header>
+
+  <div class="container">
+    <h2>📞 Get in Touch</h2>
+    <div class="info">
+      <p><strong>Contact Name:</strong> Siddharth</p>
+      <p><strong>Phone Number:</strong> 3949506970</p>
+      <p><strong>Email:</strong> support.freshmart@gmail.com</p>
+      <p><strong>Availability:</strong> 24/7</p>
+    </div>
+
+    <form id="contactForm">
+      <div class="form-group">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Message:</label>
+        <textarea id="message" rows="5" required></textarea>
+      </div>
+      <button type="submit" class="submit-btn">Send Message</button>
+    </form>
+  </div>
+
+  <footer class="footer">
+    &copy; 2025 FreshMart | Built with TRUSt & YOUR LOVE
+  </footer>
+
+  <script>
+    // Simple JS form handler
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const name = document.getElementById("name").value;
+      alert("Thank you, " + name + "! Your message has been received.");
+      this.reset(); // Clear form
+    });
+  </script>
+
+</body>
+</html>
